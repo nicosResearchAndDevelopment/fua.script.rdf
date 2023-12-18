@@ -2,13 +2,13 @@
   "name": "@nrd/fua.script.rdf",
   "version": "1.0.0",
   "description": "",
-  "main": "src/rdf.js",
   "dependencies": {
     "glob": "^10.3.10",
     "@nrd/fua.core.assert": "^1.0.1",
     "@nrd/fua.core.is": "^1.0.4",
     "@nrd/fua.module.rdf": "^1.0.1",
-    "@nrd/fua.module.persistence": "^1.0.0"
+    "@nrd/fua.module.persistence": "^1.0.0",
+    "@nrd/fua.resource.context": "^1.0.3"
   },
   "devDependencies": {
     "mocha": "^8.2.1",
