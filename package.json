@@ -1,0 +1,31 @@
+{
+  "name": "@nrd/fua.script.rdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/rdf.js",
+  "dependencies": {
+    "glob": "^10.3.10",
+    "@nrd/fua.core.assert": "^1.0.1",
+    "@nrd/fua.core.is": "^1.0.4",
+    "@nrd/fua.module.rdf": "^1.0.1",
+    "@nrd/fua.module.persistence": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "expect": "^26.6.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "mocha": {
+    "bail": false,
+    "recursive": false,
+    "spec": "test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git02.int.nsc.ag:10022/research/fua/script/rdf.git"
+  },
+  "author": "spetrac@nicos-ag.com",
+  "license": "UNLICENSED"
+}
