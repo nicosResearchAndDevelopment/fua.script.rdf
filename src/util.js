@@ -11,6 +11,21 @@ const
     defaultFactory                                 = new TermFactory(context),
     {glob: globSearch}                             = require('glob');
 
+util.asyncMain = function (fn, ...args) {
+    const resolve = () => process.exit(0);
+    const reject  = (err) => {
+        console.error(err?.stack ?? err);
+        process.exit(1);
+    };
+    try {
+        const result = fn.apply(null, args);
+        if (result instanceof Promise) result.then(resolve).catch(reject);
+        else resolve()
+    } catch (err) {
+        reject(err);
+    }
+};
+
 util.collectFiles = async function (rootFolder, globPattern) {
     assert(is.string(rootFolder) && path.isAbsolute(rootFolder), 'expected rootFolder to be an absolute path string');
     assert(is.string(globPattern) || is.array.strings(globPattern), 'expected globPattern to be a string or array of strings');
