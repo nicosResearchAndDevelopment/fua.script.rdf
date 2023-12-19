@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<https://www.example.org/test> a owl:Thing, rdfs:Resource;
+    rdfs:label "Hallo Welt!"@de, "Hello World!"@en.

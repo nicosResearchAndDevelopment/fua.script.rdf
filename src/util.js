@@ -94,5 +94,13 @@ util.writeDataset = async function (ldFile, dataset) {
     await fs.writeFile(ldFile, result);
 };
 
+util.mergeDatasets = function (datasets) {
+    assert(is.array(datasets) && datasets.length > 0, 'expected datasets to be an array with at least 1 dataset');
+    assert(datasets.every(dataset => dataset instanceof Dataset), 'expected all datasets to be an instance of Dataset');
+    const output = new Dataset(null, datasets[0].factory);
+    for (let input of datasets) output.add(input);
+    return output;
+};
+
 Object.freeze(util);
 module.exports = util;
