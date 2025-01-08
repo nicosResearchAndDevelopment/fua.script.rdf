@@ -1,13 +1,13 @@
 const
     util                                           = exports,
-    assert                                         = require('@nrd/fua.core.assert'),
-    is                                             = require('@nrd/fua.core.is'),
+    assert                                         = require('@fua/core.assert'),
+    is                                             = require('@fua/core.is'),
     path                                           = require('path'),
     {createReadStream}                             = require('fs'),
     fs                                             = require('fs/promises'),
-    context                                        = require('@nrd/fua.resource.context'),
-    {parseStream, serializeDataset, shaclValidate} = require('@nrd/fua.module.rdf'),
-    {TermFactory, Dataset}                         = require('@nrd/fua.module.persistence'),
+    context                                        = require('@fua/resource.context'),
+    {parseStream, serializeDataset, shaclValidate} = require('@fua/module.rdf'),
+    {TermFactory, Dataset}                         = require('@fua/module.persistence'),
     defaultFactory                                 = new TermFactory(context),
     {glob: globSearch}                             = require('glob');
 

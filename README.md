@@ -1,1 +1,1 @@
-# @nrd/fua.script.rdf
+# @fua/script.rdf

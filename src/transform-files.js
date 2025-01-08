@@ -3,9 +3,9 @@
 const
     util  = require('./util.js'),
     path  = require('path'),
-    async = require('@nrd/fua.core.async'),
-    tty   = require('@nrd/fua.core.tty'),
-    ts    = require('@nrd/fua.core.ts');
+    async = require('@fua/core.async'),
+    tty   = require('@fua/core.tty'),
+    ts    = require('@fua/core.ts');
 
 async.iife.process(async function TransformFiles() {
 
